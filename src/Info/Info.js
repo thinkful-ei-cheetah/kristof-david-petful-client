@@ -21,7 +21,7 @@ const Info = ({disableModal}) => {
     <div className="text-container">
     {view === 0 ? welcomeText : infoText}
     </div>
-    <div className="button-container"><button className="lets-go-btn" onClick={buttonHandler}>{view === 0 ? ">" : "Let's go!"}</button></div>
+    <div className="button-container"><button className="lets-go-btn" onClick={buttonHandler}>{view === 0 ? "begin" : "Let's go!"}</button></div>
     
   </div>  
   )

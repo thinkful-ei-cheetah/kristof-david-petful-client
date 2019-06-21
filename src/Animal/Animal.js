@@ -16,7 +16,7 @@ const Animal = ({data,imageURL, name, id, sex, age, breed, story, adopted}) => {
   
   return (
     <div className="animal" id={defaultData.id}>
-      <img className="animal-image" src={data.message} alt={`img of ${defaultData.name}`}/>
+      <img className="animal-photo" src={data.message} alt={`img of ${defaultData.name}`}/>
       <h3 className="name">Name: {defaultData.name}</h3>
       <p className='breed'>Breed: {defaultData.breed}</p>
       <p className="age">Age: {defaultData.age}</p>
