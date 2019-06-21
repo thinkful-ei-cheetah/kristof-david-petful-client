@@ -30,10 +30,11 @@ const AnimalsContainer = () => {
   }
 
   const grabData = async () =>{
+    //get data from server and update page
     const dogData =  await petfulService.peekDog()
-    console.log(dogData)
+ 
     const catData =  await petfulService.peekCat()
-    console.log(catData)
+ 
     setdogData(dogData)
     setCatData(catData)
   }
@@ -41,6 +42,7 @@ const AnimalsContainer = () => {
   const getNextDog= async () => {
     //Peek at next dog from queue and update the state
     const nextDog = petfulService.peekDog()
+    //update dog data state with current info
     setdogData(nextDog)
   }
 
@@ -49,6 +51,7 @@ const AnimalsContainer = () => {
     setCatData(nextCat)
   }
 
+  //adopting functions send delete request, disableButton, set a timer on which to check for data.
   const adoptDog = async () => {
     await petfulService.deleteDog()
     setDogButton(true)

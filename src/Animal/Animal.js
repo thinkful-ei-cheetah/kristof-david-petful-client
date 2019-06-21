@@ -1,11 +1,8 @@
 import React  from 'react';
 import './Animal.css'
-import petfulService from '../Services/petful-services'
 
 
-
-
-const Animal = ({data,adoptFunction, buttonDisabled, getNext}) => {
+const Animal = ({data,adoptFunction, buttonDisabled}) => {
   
 
   return (
@@ -15,8 +12,8 @@ const Animal = ({data,adoptFunction, buttonDisabled, getNext}) => {
       <p className='breed'>Breed: {data.breed}</p>
       <p className="age">Age: {data.age}</p>
       <p className="sex">Sex: {data.sex}</p>
-      <p className="story">{data.story}</p>
-      <input className="animal-button" type="button" value="adopt me"  disabled={buttonDisabled} onClick={adoptFunction}/>
+      <p classNamen="story">{data.story}</p>
+      <input className="animal-button" type="button" value={buttonDisabled ? "waiting on other users" :"adopt me"}  disabled={buttonDisabled} onClick={adoptFunction}/>
     </div>
   )
 }

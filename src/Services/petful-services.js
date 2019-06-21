@@ -2,17 +2,14 @@ import config from '../config';
 
 export default {
   async peekDog(){
-    console.log('i am running')
     const data = await fetch(`${config.BASE_URL}/api/dogs`).then(data => data.json())
     return data;
   },
 
   async deleteDog(){
-    const data = await fetch(`${config.BASE_URL}/api/dogs`, {  
+    await fetch(`${config.BASE_URL}/api/dogs`, {  
       method: 'DELETE',
     })
-
-    return;
   },
 
   async peekCat(){
