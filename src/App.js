@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Modal from './Modal/Modal'
 import './App.css';
+import Info from './Info/Info'
+import AnimalsContainer from './Animals-container/Animals-container'
 
 function App() {
+
+  const [showModal, setShowModal] = useState('true')
+  const disableModal = () => {
+    setShowModal(false)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showModal && 
+      <Modal >
+        <Info disableModal={disableModal}/>
+      </Modal>}
+      <h1 className ="logo">Petful</h1>
+      <hr/>
+      <AnimalsContainer/>
+    
     </div>
   );
 }
