@@ -12,7 +12,7 @@ The server repo can be found here:
 https://github.com/thinkful-ei-cheetah/Petful-server-David-Kristoff
 
 # Tech Stack
-This app uses React for the front end, and Heroku, Node & Express in the backend.
+This app uses React for the front end, and Node & Express in the backend.
 
 
 -built by Kristof and David.
