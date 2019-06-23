@@ -17,6 +17,10 @@
 }
 
 .lets-go-btn{
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   background-color: white;
   border: 1px solid black;

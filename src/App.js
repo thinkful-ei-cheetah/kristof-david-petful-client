@@ -1,25 +1,27 @@
 import React, { useState } from 'react';
-import Modal from './Modal/Modal'
+import {Switch, Route, BrowserRouter } from 'react-router-dom'
 import './App.css';
-import Info from './Info/Info'
 import AnimalsContainer from './Animals-container/Animals-container'
+import LandingPage from './LandingPage/landingpage';
 
 function App() {
 
-  const [showModal, setShowModal] = useState('true')
-  const disableModal = () => {
-    setShowModal(false)
-  }
+  // const [showLanding, setShowLanding] = useState('true')
+  // const disableModal = () => {
+  //   setShowLanding(false)
+  // }
 
   return (
     <div className="App">
-      {showModal && 
-      <Modal >
-        <Info disableModal={disableModal}/>
-      </Modal>}
       <h1 className ="logo">Petful</h1>
       <hr/>
-      <AnimalsContainer/>
+      <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={LandingPage}/>
+        <Route exact path="/adopt" component={AnimalsContainer} />
+      </Switch>
+      </BrowserRouter>
+      
     
     </div>
   );
